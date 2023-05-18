@@ -5,5 +5,5 @@ An unofficial Unraid USB Creator for Linux.
 ## Usage
 
 ```bash
-sudo nix run
+sudo nix run github:niki-on-github/unraid-usb-creator
 ```
