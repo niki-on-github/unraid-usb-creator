@@ -38,8 +38,8 @@ unzip $UNRAID_ARCHIV -d $UNRAID_TMP_MOUNTPOINT
 
 bash $UNRAID_TMP_MOUNTPOINT/make_bootable_linux
 
-umount ${target}
-umount ${target}1
+umount ${target} || true
+umount ${target}1 || true
 
 sync
 echo "Installing to ${target} complete"
