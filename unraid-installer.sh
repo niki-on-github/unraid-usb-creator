@@ -21,8 +21,8 @@ target="${selection:6:-1}"
 wget -c -O $UNRAID_ARCHIV "$UNRAID_DOWNLOAD_URL"
 [ -f $UNRAID_ARCHIV ] || error "Downloading unRAID archiv failed"
 
-umount ${target}
-[ -e "${target}1" ] && umount ${target}1
+umount ${target} || true
+[ -e "${target}1" ] && umount ${target}1 || true
 
 wipefs --force --quiet --all $target
 parted --script $target mklabel msdos
